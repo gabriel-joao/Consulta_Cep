@@ -1,0 +1,29 @@
+<!-- inicio.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Consulta de CEP</h2>
+    <form method="post">
+        <label for="cep">Digite o CEP (apenas números):</label>
+        <input type="text" name="cep" required>
+        <button type="submit">Consultar</button>
+    </form>
+
+    <div class="cep-info show">
+        {% if informacoes_cep %}
+            <h3>Informações do CEP fornecido:</h3>
+            <p><strong>Logradouro:</strong> {{ informacoes_cep.get('logradouro', 'N/A') }}</p>
+            <p><strong>Bairro:</strong> {{ informacoes_cep.get('bairro', 'N/A') }}</p>
+            <p><strong>Cidade/UF:</strong> {{ informacoes_cep.get('localidade', 'N/A') }}/{{ informacoes_cep.get('uf', 'N/A') }}</p>
+        {% else %}
+            <p>Nenhuma informação disponível para o CEP fornecido.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
