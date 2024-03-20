@@ -16,7 +16,7 @@ O objetivo principal deste projeto é realizar uma consulta usando o CEP ou o lo
 
 - **Script CEP_por_numeros:**
   - Esse script em Python utiliza a biblioteca requests para fazer requisições GET ao serviço ViaCEP, obtendo informações detalhadas de um CEP informado pelo usuário. Ele extrai dados como logradouro, bairro, cidade e UF a partir da resposta JSON da requisição. O script também permite ao usuário fazer mais consultas, caso deseje. O fluxo geral inclui verificar se a requisição foi bem-sucedida, imprimir os dados do CEP, e perguntar ao usuário se deseja fazer mais consultas, repetindo o processo se a resposta for afirmativa.
-- [Ver Script](https://github.com/gabriel-joao/Consulta_Cep/blob/main/CEP/CEP_por_numeros)
+  - [Ver Script](https://github.com/gabriel-joao/Consulta_Cep/blob/main/CEP/CEP_por_numeros)
 
 ### Autores
 
